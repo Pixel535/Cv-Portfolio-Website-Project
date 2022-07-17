@@ -1,0 +1,470 @@
+/*=========================HEADER=========================*/
+.header{
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 35px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 99999;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container{
+    width: 100%;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.header .bar .lista{
+    text-decoration: none;
+    list-style-type: none;
+    overflow: auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    opacity: 0;
+    animation: FadeIn 2s 9s forwards;
+}
+.header .bar .lista a{
+    float:right;
+    display: block;
+    color: black;
+    padding: 0px 35px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 50px;
+}
+.header .bar .lista a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 9px;
+    border-radius: 100px;
+    left:50%;
+    position:relative;
+    background: #31c0ff;
+    text-align: center;
+    transition: width .3s;
+}
+.header .bar .lista a:hover::after{
+    animation: hover 0.5s forwards;
+    transition: width .3s;
+}
+@keyframes hover {
+    from{
+        left:50%;
+        width: 0%;
+        transition: width .3s;
+    }
+    to{
+        left:0%;
+        width:100%;
+        transition: width .3s;
+    }
+}
+
+.active-link{
+    color: var(--first-color);
+}
+
+/*=========================HOME SECTION=========================*/
+.home_container{
+    gap: 1rem;
+}
+.text_container{
+    gap: 1rem;
+    padding-top: 14rem;
+}
+.button_container{
+    gap: 1rem;
+    padding-left: 300px;
+    padding-top: 3rem;
+    padding-bottom: 19rem;
+}
+/*=====IMG=====*/
+#nadol{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+/*=====ICONS=====*/
+#test{
+    font-size:100px!important;
+    position: absolute;
+    opacity: 0;
+    animation: moveUPDOWN 2s linear infinite;
+    display: flex;
+}
+#c1 {
+    font-size:100px!important;
+    position:fixed;
+    bottom:200px;
+    right:250px;
+    opacity: 0;
+    animation: mainFadeIn 2s 7.5s forwards, moveUPDOWN 1s 9.5s linear infinite;
+    }
+#c2 {
+    font-size:75px!important;
+    position:fixed;
+    bottom:150px;
+    right:500px;
+    animation: mainFadeIn 2s  7s forwards, moveUPDOWN 1s 9s linear infinite;
+    opacity: 0;
+    }
+#c3 {
+    font-size:50px!important;
+    position:fixed;
+    bottom: 75px;
+    right:700px;
+    animation: mainFadeIn 2s 6.5s forwards, moveUPDOWN 1s 8.5s linear infinite;
+    opacity: 0;
+    }    
+#c4 {
+    font-size:125px!important;
+    position:fixed;
+    bottom: 350px;
+    right:75px;
+    animation: mainFadeIn 2s 8s forwards, moveUPDOWN 1s 10s linear infinite;
+    opacity: 0;
+    }
+#c5 {
+    font-size:150px!important;
+    position:fixed;
+    top: 225px;
+    right:75px;
+    animation: mainFadeIn 2s 8.5s forwards, moveUPDOWN 1s 10.5s linear infinite;
+    opacity: 0;
+    }
+#nazdj {
+    font-size:550px!important;
+    position:fixed;
+    bottom: 250px;
+    right:250px;
+    animation: mainFadeIn 2s 9s forwards, moveUPDOWN 2s 11s linear infinite;
+    opacity: 0;
+    }
+#i1{
+    font-size:150px!important;
+    position:fixed;
+    bottom:50px;
+    left:100px;
+    animation: rotateRev 15s forwards linear infinite;
+}
+.fade{
+    font-size:150px!important;
+    position:fixed;
+    bottom:50px;
+    left:100px;
+    opacity: 0;
+    animation: FadeIn 5s 10s forwards linear;
+}
+#i2{
+    font-size:150px!important;
+    position:fixed;
+    top:150px;
+    left:800px;
+    animation: rotateRev 15s forwards linear infinite;
+}
+#i3{
+    font-size:150px!important;
+    position:fixed;
+    top:100px;
+    left:350px;
+    animation: rotate 15s forwards linear infinite;
+}
+#i4{
+    font-size:150px!important;
+    position:fixed;
+    bottom:150px;
+    left:800px;
+    animation: rotate 15s forwards linear infinite;
+}
+@keyframes FadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes rotate {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@keyframes rotateRev {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(-360deg);}
+}
+@keyframes moveUPDOWN {
+    0%,50%,100%     {opacity: 1;  transform: translateY(0);}
+    25%     {opacity: 1; transform: translateY(5px);}
+    75%    {opacity: 1; transform: translateY(-5px);}
+}
+
+
+/*=====TEXT=====*/  
+.container .parent {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    padding-left: 50px;
+}
+.container .parent .Hi {
+    width: 5%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container .parent .Hi .block {
+    width: 0%;
+    height: inherit;
+    background: #31c0ff;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    display: flex;
+}
+.container .parent .Hi p1 {
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+.container .parent .Name {
+    width: 25%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container .parent .Name .block {
+    width: 0%;
+    height: inherit;
+    background: #000000;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+.container .parent .Name p2 {
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 3.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+.container .parent .Rest {
+    width: 55%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container .parent .Rest .block {
+    width: 0%;
+    height: inherit;
+    background: #31c0ff;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 4s;
+    display: flex;
+}
+.container .parent .Rest p3 {
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 5.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+@keyframes mainBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes secFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+#p1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    position: fixed;
+    top: 150px;
+    left: 50px;
+}
+
+/*=====BUTTONS=====*/
+#b1{
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 6s;
+    opacity: 0;
+    background-color: #31c0ff;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size:50px;
+    padding: 10px 50px;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+}
+#b1:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#b1:active{
+    background-color: #31c0ff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*=========================ABOUT SECTION=========================*/
+.about_container{
+    gap: 40rem;
+    padding-top: 23rem;
+}
+
+.text2_container{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding-left: 50px;
+    max-width: 51%;
+    padding-bottom: 24rem;
+}
+
+/*=========================EXPERIENCE SECTION=========================*/
+.experience_container{
+    gap: 40rem;
+    padding-top: 20rem;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding-bottom: 40rem;
+}
+
+.line{
+    float: left;
+    background-color: #31c0ff;
+}
+
+.EmptyBox{
+    width:10px;
+    opacity: 0;
+}
+
+.Years{
+    float: left;
+}
+
+.txt{
+    padding-left: 30px;
+}
+
+.Work{
+    float: left;
+    padding-left: 60px;
+}
+
+/*=========================EDUCATION SECTION=========================*/
+
+.education_container{
+    gap: 40rem;
+    padding-top: 25rem;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding-bottom: 27rem;
+}
+
+/*=========================CONTACT SECTION=========================*/
+.contact_container{
+    gap: 40rem;
+    padding-top: 10rem;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    padding-bottom: 20rem;
+}
+
+.link{
+    padding-left: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+#icon{
+    font-size:35px;
+    padding-left: 30px;
+}
+
+#b2{
+    background-color: #31c0ff;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size:30px;
+    padding: 10px 50px;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+    max-width: 20%;
+    margin-right: 50px;
+}
+#b2:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#b2:active{
+    background-color: #31c0ff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button_container2{
+    gap: 1rem;
+    padding-left: 100px;
+    padding-top: 5rem;
+}
+
+/*
+  _____
+ /     \
+| M   G |
+ \  ^  /
+  |||||
+  |||||
+
+*/
